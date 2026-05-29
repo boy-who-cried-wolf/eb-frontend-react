@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/fonts/Inter-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("/assets/fonts/Inter-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/fonts/Outfit-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Outfit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/Outfit-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Geist-Regular.ttf") format("truetype");
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-cream: #fdf7f1;
+  --color-brand-cream-dark: #f5ebe0;
+  --color-brand-burgundy: #8a2d4f;
+  --color-brand-burgundy-dark: #6d2340;
+  --color-brand-coral: #dc704c;
+  --color-brand-coral-dark: #c45a38;
+  --color-brand-plum: #5c3d5a;
+  --color-navy-950: #212121;
+  --color-navy-900: #2a2a2a;
+  --color-navy-800: #424242;
+  --color-slate-muted: #616161;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-brand-cream font-sans text-navy-950 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+
+  ::selection {
+    @apply bg-brand-coral/30 text-navy-950;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .container-site {
+    @apply mx-auto max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .section-alt {
+    @apply bg-white/70;
+  }
+
+  .brand-card {
+    @apply rounded-2xl border border-black/[0.06] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md;
+  }
+
+  .brand-divider {
+    @apply mx-auto mt-6 h-px w-16 bg-brand-coral/40;
+  }
+
+  .hero-headline {
+    @apply font-heading text-[clamp(2rem,5vw,3.75rem)] font-bold leading-[1.15] tracking-tight;
+  }
+}
