@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { assets, links } from '../data/assets'
 import { Reveal } from './ui/Reveal'
 
@@ -7,7 +8,7 @@ export function Footer() {
       <div className="container-site">
         <Reveal>
           <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
-            <a href="#" className="shrink-0">
+            <Link to="/" className="shrink-0">
               <img
                 src={assets.logoFooter}
                 alt="Evolve Broker powered by Effi"
@@ -15,33 +16,18 @@ export function Footer() {
                 width={1024}
                 height={473}
               />
-            </a>
+            </Link>
 
             <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/75">
-              <a
-                href={links.privacy}
-                className="transition-colors hover:text-white"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link to={links.privacy} className="transition-colors hover:text-white">
                 Privacy Policy
-              </a>
-              <a
-                href={links.terms}
-                className="transition-colors hover:text-white"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              </Link>
+              <Link to={links.terms} className="transition-colors hover:text-white">
                 Terms of Service
-              </a>
-              <a
-                href={links.contact}
-                className="transition-colors hover:text-white"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              </Link>
+              <Link to={links.contact} className="transition-colors hover:text-white">
                 Contact Us
-              </a>
+              </Link>
             </nav>
 
             <a

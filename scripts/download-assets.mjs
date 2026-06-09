@@ -28,6 +28,9 @@ const assets = [
   { url: 'https://evolvebroker.ai/wp-content/uploads/2025/08/Outfit-Bold.ttf', dest: 'fonts/Outfit-Bold.ttf' },
   { url: 'https://evolvebroker.ai/wp-content/uploads/2026/03/Geist-Regular.ttf', dest: 'fonts/Geist-Regular.ttf' },
   { url: 'https://evolvebroker.ai/wp-content/uploads/2026/03/TAKE-4-6192.mp4', dest: 'video/platform-overview.mp4' },
+  { url: 'https://evolvebroker.ai/wp-content/uploads/2026/04/Nectar-Presentation_ver-2-1-1024x576.png', dest: 'images/contact-hero.png' },
+  { url: 'https://assets.cdn.filesafe.space/yF88KZm5PIr4SLHf0wBp/media/699707984c250265ef84a934.png', dest: 'images/insights-hero.png' },
+  { url: 'https://evolvebroker.ai/wp-content/uploads/2026/04/Imagery-for-Evolve-Broker-busy-serious-broker-768x1024.png', dest: 'images/nfbd26-broker.png' },
 ]
 
 async function download(url, dest) {

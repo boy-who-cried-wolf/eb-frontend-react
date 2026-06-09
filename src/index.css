@@ -126,4 +126,32 @@
   .hero-headline {
     @apply font-heading text-[clamp(2rem,5vw,3.75rem)] font-bold leading-[1.15] tracking-tight;
   }
+
+  .legal-prose h1 {
+    @apply mb-8 font-heading text-4xl font-bold text-brand-burgundy;
+  }
+
+  .legal-prose h3 {
+    @apply mt-8 mb-4 font-heading text-xl font-bold text-brand-burgundy;
+  }
+
+  .legal-prose p {
+    @apply mb-4 leading-relaxed text-navy-800/90;
+  }
+
+  .legal-prose ul {
+    @apply mb-6 list-disc space-y-2 pl-6 text-navy-800/90;
+  }
+
+  .legal-prose li p {
+    @apply mb-0;
+  }
+
+  .legal-prose strong {
+    @apply font-semibold text-navy-950;
+  }
+
+  .legal-prose a {
+    @apply text-brand-coral underline underline-offset-2 hover:text-brand-coral-dark;
+  }
 }

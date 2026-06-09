@@ -1,4 +1,5 @@
 import type { ButtonHTMLAttributes } from 'react'
+import { Link } from 'react-router-dom'
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost'
 type ButtonSize = 'md' | 'lg'
@@ -23,6 +24,15 @@ const sizes: Record<ButtonSize, string> = {
   lg: 'px-8 py-3.5 text-base',
 }
 
+function isExternalHref(href: string, external?: boolean) {
+  if (external !== undefined) return external
+  return (
+    href.startsWith('http') ||
+    href.startsWith('mailto:') ||
+    href.startsWith('tel:')
+  )
+}
+
 export function Button({
   variant = 'primary',
   size = 'md',
@@ -35,15 +45,18 @@ export function Button({
   const classes = `inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300 ${variants[variant]} ${sizes[size]} ${className}`
 
   if (href) {
-    const isExternal = external ?? href.startsWith('http')
+    if (isExternalHref(href, external)) {
+      return (
+        <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      )
+    }
+
     return (
-      <a
-        href={href}
-        className={classes}
-        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      >
+      <Link to={href} className={classes}>
         {children}
-      </a>
+      </Link>
     )
   }
 

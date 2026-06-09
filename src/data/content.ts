@@ -1,8 +1,8 @@
 export const navLinks = [
-  { label: 'Why Evolve', href: '#why' },
-  { label: 'Features', href: '#features' },
-  { label: 'About', href: '#about' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Why Evolve', href: '/#why' },
+  { label: 'Features', href: '/#features' },
+  { label: 'About', href: '/#about' },
+  { label: 'FAQ', href: '/#faq' },
 ] as const
 
 export const painQuestions = [
